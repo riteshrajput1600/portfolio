@@ -5,10 +5,10 @@ import { SiHackerearth } from 'react-icons/si';
 
 const Hero = () => {
   const social_media = [
-    { name: "logo-linkedin", link: "https://www.linkedin.com/in/example", icon: FaLinkedin },
-    { name: "logo-github", link: "https://github.com/example", icon: FaGithub },
-    { name: "logo-hackerrank", link: "https://github.com/example", icon: FaHackerrank },
-    { name: "logo-hackerearth", link: "https://github.com/example", icon: SiHackerearth },
+    { name: "logo-linkedin", link: "https://www.linkedin.com/in/riteshrajput1600/", icon: FaLinkedin },
+    { name: "logo-github", link: "https://github.com/riteshrajput1600", icon: FaGithub },
+    { name: "logo-hackerrank", link: "https://www.hackerrank.com/riteshsingh1600", icon: FaHackerrank },
+    { name: "logo-hackerearth", link: "https://www.hackerearth.com/@riteshsingh1600", icon: SiHackerearth },
   ];
 
   return (

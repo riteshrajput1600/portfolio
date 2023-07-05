@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const contact_info = [
     { logo: "mail", text: "riteshsingh1600@gmail.com" },
     { logo: "logo-whatsapp", text: "+91 709 168 7597" },
-    {
-      logo: "location",
-      text: "Patna, Bihar",
-    },
+    { logo: "location", text: "Patna, Bihar" },
   ];
 
   const [name, setName] = useState("");
@@ -33,12 +32,31 @@ const Contact = () => {
     // Send email using EmailJS
     emailjs.sendForm("service_bqj1hjr", "template_daa2s81", e.target, "NdTjfpYrUxskarrND")
       .then((result) => {
-        console.log("Email sent successfully");
+        // console.log("Email sent successfully");
         // Perform any success actions or display a success message to the user
+        toast.success('Message Sent Successfully', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       })
       .catch((error) => {
-        console.error("Error sending email:", error);
-        // Perform any error handling or display an error message to the user
+        // console.error("Error sending email:", error);
+        toast.error(`Message Cann't be send`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
       });
 
     // Reset form fields
@@ -63,7 +81,7 @@ const Contact = () => {
               placeholder="Your Name"
               value={name}
               onChange={handleNameChange}
-              name="user_name" 
+              name="user_name"
             />
             <input
               type="email"
@@ -84,8 +102,6 @@ const Contact = () => {
             </button>
           </form>
           
-
-
           <div className="flex flex-col  gap-7 ">
             {contact_info.map((contact, i) => (
               <div
@@ -104,6 +120,19 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+       position="top-right"
+       autoClose={5000}
+       hideProgressBar={false}
+       newestOnTop={false}
+       closeOnClick
+       rtl={false}
+       pauseOnFocusLoss
+       draggable
+       pauseOnHover
+       theme="colored"
+        
+      />
     </section>
   );
 };
