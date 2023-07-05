@@ -1,14 +1,14 @@
 import React from "react";
-import { FaBeer } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaHackerrank } from 'react-icons/fa';
+import { SiHackerearth } from 'react-icons/si';
 
 
 const Hero = () => {
   const social_media = [
-    { name: "logo-linkedin", link: "https://www.linkedin.com/in/example" },
-    { name: "logo-github", link: "https://github.com/example" },
-    { name: FaBeer, link: "https://github.com/example" },
-    { name: "logo-github", link: "https://github.com/example" },
-    { name: "logo-github", link: "https://github.com/example" },
+    { name: "logo-linkedin", link: "https://www.linkedin.com/in/example", icon: FaLinkedin },
+    { name: "logo-github", link: "https://github.com/example", icon: FaGithub },
+    { name: "logo-hackerrank", link: "https://github.com/example", icon: FaHackerrank },
+    { name: "logo-hackerearth", link: "https://github.com/example", icon: SiHackerearth },
   ];
 
   return (
@@ -38,7 +38,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-white cursor-pointer"
               >
-                <ion-icon name={icon.name}></ion-icon>
+                <icon.icon />
               </a>
             ))}
           </div>

@@ -33,7 +33,7 @@ const About = () => {
                     <span className="md:text-base text-xs">{content.text}</span>
                   </div>
                 ))}
-                <a href="./src/assets/Code_a_program.pdf" download>
+                <a href="./src/assets/resume.pdf" download>
                 <button className="btn-primary">Download CV</button>
               </a>
               </div>
